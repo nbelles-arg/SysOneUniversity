@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         int j = 0, nsocio=12354,dni = 36278564;
-        int height[] = {176,155, 182, 147, 165, 162, 179, 150, 180, 191};
+        int heights[] = {176,155, 182, 147, 165, 162, 179, 150, 180, 191};
         String names[] = {"Nicolas", "Ignacio", "Martin","Santiago", "Marcio", "Sebastian", "Belen", "Matias", "Esteban", "Manuel" };
 
         if ((dni%2) == 0) {
@@ -20,7 +20,7 @@ public class Main {
             System.out.println("Su numero de documento es = " + dni + "\n");
         }
 
-        for(int i=0;i<=5;i+=1) {
+        for(int i=0;i<=5;i++) {
             nsocio++;
             System.out.println("Tu número de socio es ="+nsocio);
         }
@@ -34,11 +34,20 @@ public class Main {
             System.out.println("Numero de iteración = "+(j-5));
             j++;
         }
-        Arrays.sort(height);
-       double average =  Arrays.stream(height).average().getAsDouble();
-        System.out.println("\n La altura promedio es = " + average + "\n" +
-                "La altura mínima es =" + height[0] + "\n" +
-                "La altura máxima es = " + height[9]);
 
+        /*Adding the name of the tallest and the smallest person to the last exercise */
+
+       int max =  Arrays.stream(heights).max().getAsInt();
+       int min = Arrays.stream(heights).min().getAsInt();
+       for (int i=0 ; i <heights.length;i++){
+           if (heights[i] == max) System.out.println("\n La persona más alta es =" + names[i] + " con una altura de " + max);
+           if (heights[i]==min)System.out.println("\n La persona más pequeña es = " + names[i] + " con una altura de " + min);
+       }
+        /*Getting the average, the maximum and minimum height of an array (This exercise goes before but i changed the order because I'm using the sort function here) */
+        Arrays.sort(heights);
+        double average =  Arrays.stream(heights).average().getAsDouble();
+        System.out.println("\n La altura promedio es = " + average + "\n" +
+                "La altura mínima es =" + heights[0] + "\n" +
+                "La altura máxima es = " + heights[9]);
     }
 }
