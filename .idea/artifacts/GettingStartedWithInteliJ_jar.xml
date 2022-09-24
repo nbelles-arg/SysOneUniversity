@@ -2,7 +2,7 @@
   <artifact type="jar" name="GettingStartedWithInteliJ:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/GettingStartedWithInteliJ_jar</output-path>
     <root id="archive" name="GettingStartedWithInteliJ.jar">
-      <element id="module-output" name="GettingStartedWithInteliJ" />
+      <element id="module-output" name="SysOneUniversity" />
     </root>
   </artifact>
 </component>
