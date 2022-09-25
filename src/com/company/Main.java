@@ -1,9 +1,7 @@
 package com.company;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.OptionalDouble;
+
 
 public class Main {
 
@@ -47,14 +45,12 @@ public class Main {
 
        int max =  Arrays.stream(heights).max().getAsInt();
        int min = Arrays.stream(heights).min().getAsInt();
-       double average =  Arrays.stream(heights).average().getAsDouble();
-       System.out.println("\n La altura promedio es = " + average);
+       System.out.println("\n La altura promedio es = " +  Arrays.stream(heights).average().getAsDouble());
        for (int i=0 ; i <heights.length;i++){
            if (heights[i] == max) System.out.println("\n La persona más alta es =" + names[i] + " con una altura de " + max);
            if (heights[i]==min)System.out.println("\n La persona más pequeña es = " + names[i] + " con una altura de " + min);
            /*Nex exercise adding the average math grades of every student*/
-           double averageGrade = Arrays.stream(mathGrades[i]).average().getAsDouble();
-           System.out.println("\n La nota promedio en Matemáticas de " + names[i] + " es = " + averageGrade);
+           System.out.println("\n La nota promedio en Matemáticas de " + names[i] + " es = " + Arrays.stream(mathGrades[i]).average().getAsDouble());
        }
     }
 }
