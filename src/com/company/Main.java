@@ -6,7 +6,9 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
+       /*Commented because i have to start a new exercise about boats
         int j = 0, nsocio=12354,dni = 36278564;
+
         int heights[] = {176,155, 182, 147, 165, 162, 179, 150, 180, 191};
         int mathGrades [] [] = {{7,6},{8,5},{9,8},{10,9},{5,6},{7,8},{4,2},{8,10},{8,6},{10,10}};
         String names[] = {"Nicolas", "Ignacio", "Martin","Santiago", "Marcio", "Sebastian", "Belen", "Matias", "Esteban", "Manuel" };
@@ -41,7 +43,7 @@ public class Main {
                 "La altura mínima es =" + heights[0] + "\n" +
                 "La altura máxima es = " + heights[9]); commented so my array don't get sorted*/
 
-        /*Adding the name of the tallest and the smallest person to the last exercise */
+        /*Adding the name of the tallest and the smallest person to the last exercise
 
        int max =  Arrays.stream(heights).max().getAsInt();
        int min = Arrays.stream(heights).min().getAsInt();
@@ -49,8 +51,10 @@ public class Main {
        for (int i=0 ; i <heights.length;i++){
            if (heights[i] == max) System.out.println("\n La persona más alta es =" + names[i] + " con una altura de " + max);
            if (heights[i]==min)System.out.println("\n La persona más pequeña es = " + names[i] + " con una altura de " + min);
-           /*Nex exercise adding the average math grades of every student*/
+           /*Nex exercise adding the average math grades of every student
            System.out.println("\n La nota promedio en Matemáticas de " + names[i] + " es = " + Arrays.stream(mathGrades[i]).average().getAsDouble());
-       }
+       }*/
+
+
     }
 }
