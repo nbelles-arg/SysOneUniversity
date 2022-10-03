@@ -1,13 +1,19 @@
 package com.company;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-public abstract class  Boat {
-    protected   int eslora, valorFijo =2;
-    protected String matricula ;
-    protected Date anioFabricacion;
+public class  Boat {
+    public   double eslora;
+    public int valorFijo =2;
+    public String matricula ;
+    public LocalDate anioFabricacion;
 
-    protected int  funcion(){
+    public Boat (   double eslora,  String matricula , LocalDate anioFabricacion){
+        this.eslora=eslora;
+        this.matricula=matricula;
+        this.anioFabricacion=anioFabricacion;
+    }
+    protected double  funcion(){
         return  eslora*valorFijo*10;
     }
 }
