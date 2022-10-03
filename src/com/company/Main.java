@@ -13,33 +13,33 @@ public class Main {
 
 
         while (true){
-            Scanner scanner = new Scanner(System.in);                                                        //Creating a Scanner object
-            System.out.println("Enter the name of the client (Enter  bye to finish)");                  //Entering all the leasing information
+            Scanner scanner = new Scanner(System.in);                                                                  //Creating a Scanner object
+            System.out.println("Enter the name of the client (Enter  bye to finish)");                   //Entering all the leasing information
             String nombreCliente = scanner.nextLine();
-            if ("bye".equalsIgnoreCase(nombreCliente)){                                                            //The user can finish the process with Enter
+            if ("bye".equalsIgnoreCase(nombreCliente)){                                                               //The user can finish the process with Enter
                 break;
             }
+            System.out.println("Enter the boat's matricula please");
+            String matricula = scanner.nextLine();
             System.out.println("Enter the client DNI please");
             int dniCliente = scanner.nextInt();
             System.out.println("Enter the boat amarre position pleas");
             int  posicionAmarre = scanner.nextInt();
-            System.out.println("Enter the initial year of the  lease please");                      //Getting the initial date of the lease
+            System.out.println("Enter the initial year of the  lease please");                                  //Getting the initial date of the lease
             int initialYear = scanner.nextInt();
             System.out.println("Enter the initial month of the  lease please");
             int initialMonth = scanner.nextInt();
             System.out.println("Enter the initial day of the lease please");
             int initialDay = scanner.nextInt();
-            System.out.println("Enter the final year of the  lease please");                        //Getting the final date of the lease
+            System.out.println("Enter the final year of the  lease please");                                      //Getting the final date of the lease
             int finalYear = scanner.nextInt();
             System.out.println("Enter the final month of the  lease please");
             int finalMonth = scanner.nextInt();
             System.out.println("Enter the final day of the lease please");
             int finalDay = scanner.nextInt();
-            System.out.println("Enter the eslora dimention of a boat ");
-            double eslora = scanner.nextDouble();                                                                   //Getting the parameters for all kind of boats
-            System.out.println("Enter the boat's matricula please");
-            String matricula = scanner.nextLine();
-            System.out.println("Enter the fabrication year of the boat pleas ");
+            System.out.println("Enter the eslora dimension of a boat ");
+            double eslora = scanner.nextDouble();                                                                                //Getting the parameters for all kind of boats
+            System.out.println("Enter the fabrication year of the boat please ");
             int year = scanner.nextInt();
             System.out.println("Enter the fabrication month of the boat please");
             int month = scanner.nextInt();
@@ -65,11 +65,10 @@ public class Main {
                     int nroCamarotes = scanner.nextInt();
                     leasings.add( new Leasing(nombreCliente,dniCliente,posicionAmarre,LocalDate.of(initialYear,initialMonth,initialDay),LocalDate.of(finalYear,finalMonth,finalDay), new LuxuryYacht(eslora,matricula,LocalDate.of(year,month,day),potenciaCV1,nroCamarotes)));
             }
-
-            for (Leasing i:leasings)
-                System.out.print("\n El cliente " + i.getNombreCliente() + " con DNI = " + i.getDniCliente() + " debe " + i.getLeasing() + " por alquilar el amarre N° " + i.getPosicionAmarre());
         }
 
+        for (Leasing i:leasings)                        //printing all the leasings
+            System.out.print("\n El cliente " + i.getNombreCliente() + " con DNI = " + i.getDniCliente() + " debe " + i.getLeasing() + " por alquilar el amarre N° " + i.getPosicionAmarre());
 
         //S Second way to solve the problem hardcoding the values
        SailingBoat sailingBoat = new SailingBoat(3.5,"7BA308", LocalDate.of(1992,8,18), 4);
