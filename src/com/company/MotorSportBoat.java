@@ -12,6 +12,6 @@ public class MotorSportBoat extends Boat{
 
     @Override
     protected double funcion() {
-        return super.funcion() + potenciaCV;
+        return super.funcion() + potenciaCV;    //for MotorSportBoats we need to add the power to the function
     }
 }

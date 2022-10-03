@@ -44,7 +44,7 @@ public class Leasing {
 
 
     public double getLeasing(){
-        return ChronoUnit.DAYS.between(fechaInicial,fechaFinal)*barco.funcion();
+        return ChronoUnit.DAYS.between(fechaInicial,fechaFinal)*barco.funcion();    //leasing calculation = days of leasings*boat function
     }
 
 }

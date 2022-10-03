@@ -12,6 +12,6 @@ public class SailingBoat extends Boat{
 
     @Override
     protected double   funcion(){
-        return  super.funcion() + numMastiles;
+        return  super.funcion() + numMastiles;      //SailingBoats should add the number of masts to the Boat function
     }
 }

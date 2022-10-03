@@ -14,6 +14,6 @@ public class  Boat {
         this.anioFabricacion=anioFabricacion;
     }
     protected double  funcion(){
-        return  eslora*valorFijo*10;
+        return  eslora*valorFijo*10;    //Generic math for all boats
     }
 }
