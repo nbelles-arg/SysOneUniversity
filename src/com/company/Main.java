@@ -1,9 +1,9 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+
+import java.util.*;
 import java.time.LocalDate;
-import java.util.Scanner;
 
 
 public class Main {
@@ -23,7 +23,7 @@ public class Main {
             String matricula = scanner.nextLine();
             System.out.println("Enter the client DNI please");
             int dniCliente = scanner.nextInt();
-            System.out.println("Enter the boat amarre position pleas");
+            System.out.println("Enter the boat amarre position please");
             int  posicionAmarre = scanner.nextInt();
             System.out.println("Enter the initial year of the  lease please");                                  //Getting the initial date of the lease
             int initialYear = scanner.nextInt();
@@ -67,8 +67,18 @@ public class Main {
             }
         }
 
-        for (Leasing i:leasings)                        //printing all the leasings
+        double max=leasings.get(0).getLeasing(),min= leasings.get(0).getLeasing();
+        for (Leasing i:leasings) {
+            //getting the max and the min
+            if (i.getLeasing() < min)
+                min = i.getLeasing();
+            if (i.getLeasing() > max)
+                max = i.getLeasing();
+            //printing all the leasings
             System.out.print("\n El cliente " + i.getNombreCliente() + " con DNI = " + i.getDniCliente() + " debe " + i.getLeasing() + " por alquilar el amarre N° " + i.getPosicionAmarre());
+        }
+        //printing the maximum, minimum leasing, the monthly and yearly average
+        System.out.println("\n El alquiler máximo es  de " +max + "  y el alquiler mínimo es de " + min);
 
         //S Second way to solve the problem hardcoding the values
        SailingBoat sailingBoat = new SailingBoat(3.5,"7BA308", LocalDate.of(1992,8,18), 4);
