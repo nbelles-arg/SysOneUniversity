@@ -31,7 +31,7 @@
           System.out.println("Numero de iteración = "+(j-5));
           j++;
       }
-   # Challange about student¿s height, the maximum, mínimum and average   
+   # Challange about student's height, the maximum, mínimum and average   
       /*Getting the average, the maximum and minimum height of an array  */
       Arrays.sort(heights);
       double average =  Arrays.stream(heights).average().getAsDouble();
