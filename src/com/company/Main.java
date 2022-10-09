@@ -80,20 +80,7 @@ public class Main {
         //printing the maximum, minimum leasing, the monthly and yearly average
         System.out.println("\n El alquiler máximo es  de " +max + "  y el alquiler mínimo es de " + min);
 
-        //S Second way to solve the problem hardcoding the values
-       SailingBoat sailingBoat = new SailingBoat(3.5,"7BA308", LocalDate.of(1992,8,18), 4);
-        leasings.add(new Leasing("Nicolas Belles",36278564,1,LocalDate.of(2022,9,10),LocalDate.of(2022,9,20),sailingBoat));
-        SailingBoat sailingBoat1= new SailingBoat(10,"YB7992878", LocalDate.of(1954,9,21),7);
-        leasings.add(new Leasing("Ignacio Capelli",623214,2,LocalDate.of(2022,8,22),LocalDate.of(2022,9,29),sailingBoat1));
-        MotorSportBoat motorSportBoat = new MotorSportBoat(5.7,"AR7763Z",LocalDate.of(2001,9,11),60);
-        leasings.add(new Leasing("Mariano Chaves",32568712,3,LocalDate.of(2022,5,1),LocalDate.of(2022,9,1),motorSportBoat));
-        LuxuryYacht luxuryYacht = new LuxuryYacht(19,"IGN6789W",LocalDate.of(1989,12,31),120,5);
-        leasings.add(new Leasing("Raul Parola",35789521,4,LocalDate.of(2021,11,30),LocalDate.of(2022,3,21),luxuryYacht));
-        LuxuryYacht luxuryYacht1 = new LuxuryYacht(25,"NIK34509",LocalDate.of(1950,2,10),145,7);
-        leasings.add(new Leasing("Agustin Latorre",31205489,5,LocalDate.of(2022,6,1),LocalDate.of(2022,10,1),luxuryYacht1));
 
-        for (Leasing i:leasings)
-            System.out.print("\n El cliente " + i.getNombreCliente() + " con DNI = " + i.getDniCliente() + " debe " + i.getLeasing() + " por alquilar el amarre N° " + i.getPosicionAmarre());
 
     }
 }
