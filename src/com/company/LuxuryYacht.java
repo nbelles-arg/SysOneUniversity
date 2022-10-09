@@ -12,6 +12,6 @@ public class LuxuryYacht extends MotorSportBoat{
 
     @Override
     protected double  funcion(){
-        return super.funcion()+nroCamarotes;    //for LuxuryTacht we have to add nroCamarotes to the MotorSportBoat function
+        return super.funcion()+nroCamarotes;    //for LuxuryYacht we have to add nroCamarotes to the MotorSportBoat function
     }
 }

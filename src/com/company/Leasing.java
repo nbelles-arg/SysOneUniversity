@@ -18,30 +18,13 @@ public class Leasing {
         this. barco = barco;
     }
 
-    public String getNombreCliente(){
-        return nombreCliente;
+    public int getInicialMonth(){
+        return this.fechaInicial.getMonthValue();
     }
 
-    public int getDniCliente() {
-        return dniCliente;
+    public int getFinalMonth(){
+        return this.fechaFinal.getMonthValue();
     }
-
-    public int getPosicionAmarre() {
-        return posicionAmarre;
-    }
-
-    public LocalDate getFechaFinal() {
-        return fechaFinal;
-    }
-
-    public LocalDate getFechaInicial() {
-        return fechaInicial;
-    }
-
-    public Boat getBarco() {
-        return barco;
-    }
-
     public long daysBetween(){
         return ChronoUnit.DAYS.between(fechaInicial,fechaFinal);
     }

@@ -56,20 +56,16 @@ public class Port {
                     System.out.println("Enter the engine power in CV please");
                     int potenciaCV = scanner.nextInt();
                     leasings.add( new Leasing(nombreCliente,dniCliente,posicionAmarre,LocalDate.of(initialYear,initialMonth,initialDay),LocalDate.of(finalYear,finalMonth,finalDay), new MotorSportBoat(eslora,matricula,LocalDate.of(year,month,day),potenciaCV)));
-                case 3:
+                    break;
+                    case 3:
                     System.out.println("Enter the engine power in CV please");
                     int potenciaCV1 = scanner.nextInt();
                     System.out.println("Enter the number of cabins please");
                     int nroCamarotes = scanner.nextInt();
                     leasings.add( new Leasing(nombreCliente,dniCliente,posicionAmarre,LocalDate.of(initialYear,initialMonth,initialDay),LocalDate.of(finalYear,finalMonth,finalDay), new LuxuryYacht(eslora,matricula,LocalDate.of(year,month,day),potenciaCV1,nroCamarotes)));
+                    break;
             }
         }
-    }
-
-    public void getLeasings(){
-        //printing all the leasings
-        for(Leasing i:leasings)
-            System.out.print("\n El cliente " + i.getNombreCliente() + " con DNI = " + i.getDniCliente() + " debe " + i.getLeasing() + " por alquilar el amarre N° " + i.getPosicionAmarre());
     }
 
     public  double getMin(){
@@ -86,7 +82,7 @@ public class Port {
         double max= leasings.get(0).getLeasing();
         //getting the maximum lease
         for (Leasing i:leasings) {
-            if (i.getLeasing() < max)
+            if (i.getLeasing() > max)
                 max = i.getLeasing();
         }
         return max;
@@ -101,8 +97,73 @@ public class Port {
         return (avrg/leasings.size())*365;
     }
 
-    public double getMonthlyEverage(){
+    public double getMonthlyAverage(){
         //getting the monthly average lease
         return this.getAnualAverage()/12;
+    }
+
+    public void getEveryMonthAverage(){
+        //getting the monthly average lease for every month of the year
+        double months[]={0,0,0,0,0,0,0,0,0,0,0,0};
+        String monthNames[]={"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto ","Septiembre","Octubre","Noviembre","Diciembre"};
+        int amount []=             {0,0,0,0,0,0,0,0,0,0,0,0};
+
+        for(Leasing i:leasings){
+
+            if((i.getInicialMonth()<=1) && (i.getFinalMonth()>=1)) {
+                months[0] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[0]+= 1;
+            }
+            if((i.getInicialMonth()<=2) && (i.getFinalMonth()>=2)) {
+                months[1] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[1]+= 1;
+            }
+            if((i.getInicialMonth()<=3) && (i.getFinalMonth()>=3)) {
+                months[2] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[2]+= 1;
+            }
+            if((i.getInicialMonth()<=4) && (i.getFinalMonth()>=4)) {
+                months[3] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[3]+= 1;
+            }
+            if((i.getInicialMonth()<=5) && (i.getFinalMonth()>=5)) {
+                months[4] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[4]+= 1;
+            }
+            if((i.getInicialMonth()<=6) && (i.getFinalMonth()>=6)) {
+                months[5] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[5]+= 1;
+            }
+            if((i.getInicialMonth()<=7) && (i.getFinalMonth()>=7)) {
+                months[6] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[6]+= 1;
+            }
+            if((i.getInicialMonth()<=8) && (i.getFinalMonth()>=8)) {
+                months[7] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[7]+= 1;
+            }
+            if((i.getInicialMonth()<=9) && (i.getFinalMonth()>=9)) {
+                months[8] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[8]+= 1;
+            }
+            if((i.getInicialMonth()<=10) && (i.getFinalMonth()>=10)) {
+                months[9] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[9]+= 1;
+            }
+            if((i.getInicialMonth()<=11) && (i.getFinalMonth()>=11)) {
+                months[10] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[10]+= 1;
+            }
+            if((i.getInicialMonth()<=12) && (i.getFinalMonth()>=12)) {
+                months[11] += (i.getLeasing() / (i.getFinalMonth() - i.getInicialMonth()));
+                amount[11]+= 1;
+            }
+        }
+
+        //Making shure thre's no NaN average and printing
+        for (int i=0; i<months.length; i++) {
+            if (Double.isNaN(months[i] / amount[i])) amount[i] = 1;
+            System.out.println("\nEl alquiler promedio de "+ monthNames[i] + " es: " + months[i] / amount[i]);
+        }
     }
 }
