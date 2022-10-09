@@ -42,9 +42,11 @@ public class Leasing {
         return barco;
     }
 
-
+    public long daysBetween(){
+        return ChronoUnit.DAYS.between(fechaInicial,fechaFinal);
+    }
     public double getLeasing(){
-        return ChronoUnit.DAYS.between(fechaInicial,fechaFinal)*barco.funcion();    //leasing calculation = days of leasings*boat function
+        return this.daysBetween()*barco.funcion();    //leasing calculation = days of leasings*boat function
     }
 
 }
