@@ -35,7 +35,7 @@ while (j<=11){
     System.out.println("Numero de iteración = "+(j-5));
     j++;
 }
-
+}
 **Challange about student's height, the maximum, mínimum and average**
     
 /*Getting the average, the maximum and minimum height of an array  */
@@ -56,7 +56,7 @@ for (int i=0 ; i <heights.length;i++){
     /*Next exercise adding the average math grades of every student
     System.out.println("\n La nota promedio en Matemáticas de " + names[i] + " es = " + Arrays.stream(mathGrades[i]).average().getAsDouble());
 }
-} 
+ 
   ### En un puerto se alquilan amarres para  barcos  de distinto tipo. Para cada ALQUILER se guarda el nombre y DNI del cliente, las fechas  inicial  y final de  alquiler, la posición  del amarre y el barco que  lo ocupará. Un BARCO se caracteriza por su matrícula, su eslora en metros y año de fabricación. Un alquiler se calcula multiplicando el número de días de ocupación (incluyendo los días inicial y final) por un módulo función de cada barco (obtenido simplemente multiplicando por 10 los metros de eslora) y por un valor fijo (2 e en la actualidad). Sin embargo ahora se pretende diferenciar la información de algunos  tipos de barcos:
 ### •         Número  de mástiles para  veleros
 ### •         Potencia en CV para  embarcaciones deportivas a motor
