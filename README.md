@@ -6,6 +6,7 @@
 package com.company;
 
 public class Main {
+
 int j = 0, nsocio=12354,dni = 36278564;
 
 int heights[] = {176,155, 182, 147, 165, 162, 179, 150, 180, 191};
