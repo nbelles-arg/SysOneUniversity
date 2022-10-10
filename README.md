@@ -1,8 +1,8 @@
 # SysOneUniversity
 
- # This project collects all challanges made through the SysOne University course
+    # This project collects all challanges made through the SysOne University course
 
- # First exercises about iterative structures
+    # First exercises about iterative structures
       int j = 0, nsocio=12354,dni = 36278564;
 
       int heights[] = {176,155, 182, 147, 165, 162, 179, 150, 180, 191};
