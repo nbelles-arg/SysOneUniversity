@@ -51,8 +51,7 @@ int min = Arrays.stream(heights).min().getAsInt();
 System.out.println("\n La altura promedio es = " +  Arrays.stream(heights).average().getAsDouble());
 for (int i=0 ; i <heights.length;i++){
     if (heights[i] == max) System.out.println("\n La persona más alta es =" + names[i] + " con una altura de " + max);
-    if (heights[i]==min)System.out.println("\n La persona más pequeña es = " + names[i] + " con una altura de " + min);
-          
+    if (heights[i]==min)System.out.println("\n La persona más pequeña es = " + names[i] + " con una altura de " + min);          
     /*Next exercise adding the average math grades of every student
     System.out.println("\n La nota promedio en Matemáticas de " + names[i] + " es = " + Arrays.stream(mathGrades[i]).average().getAsDouble());
 }
@@ -65,7 +64,7 @@ for (int i=0 ; i <heights.length;i++){
 ### o    El número de mástiles para  veleros
 ### o    La potencia en CV para  embarcaciones deportivas a motor
 ### o    La potencia en CV mas el número de camarotes para  yates de lujo
-# Utilizando la herencia de forma  apropiada, diseñe el diagrama de clases y sus relaciones, con  detalle de atributos  y métodos necesarios. Programe en Eiffel los métodos que permitan calcular el alquiler de cualquier tipo de barco.
+### Utilizando la herencia de forma  apropiada, diseñe el diagrama de clases y sus relaciones, con  detalle de atributos  y métodos necesarios. Programe en Eiffel los métodos que permitan calcular el alquiler de cualquier tipo de barco.
 
 
 **Main.java**
