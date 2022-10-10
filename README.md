@@ -1,8 +1,8 @@
 # SysOneUniversity
 
-# This project collects all challanges made through the SysOne University course
+ # This project collects all challanges made through the SysOne University course
 
-# First exercises about iterative structures
+ # First exercises about iterative structures
       int j = 0, nsocio=12354,dni = 36278564;
 
       int heights[] = {176,155, 182, 147, 165, 162, 179, 150, 180, 191};
@@ -31,7 +31,7 @@
           System.out.println("Numero de iteración = "+(j-5));
           j++;
       }
-   # Challange about student's height, the maximum, mínimum and average   
+    # Challange about student's height, the maximum, mínimum and average   
       /*Getting the average, the maximum and minimum height of an array  */
       Arrays.sort(heights);
       double average =  Arrays.stream(heights).average().getAsDouble();
