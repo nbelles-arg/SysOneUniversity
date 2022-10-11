@@ -4,7 +4,7 @@
 
 ### First exercises about iterative structures
 
-package com.company;
+```package com.company;
 
 public class Main {
 
@@ -36,7 +36,7 @@ public class Main {
       System.out.println("Numero de iteración = "+(j-5));
       j++;
   }
-}
+}```
 
 **Challange about student's height, the maximum, mínimum and average**
     
