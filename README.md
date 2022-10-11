@@ -3,6 +3,7 @@
 ## This project collects all challanges made through the SysOne University course
 
 ### First exercises about iterative structures
+
 package com.company;
 
 public class Main {
@@ -36,6 +37,7 @@ public class Main {
       j++;
   }
 }
+
 **Challange about student's height, the maximum, mínimum and average**
     
 /*Getting the average, the maximum and minimum height of an array  */
