@@ -7,54 +7,54 @@ package com.company;
 
 public class Main {
 
-int j = 0, nsocio=12354,dni = 36278564;
+  int j = 0, nsocio=12354,dni = 36278564;
 
-int heights[] = {176,155, 182, 147, 165, 162, 179, 150, 180, 191};
-int mathGrades [] [] = {{7,6},{8,5},{9,8},{10,9},{5,6},{7,8},{4,2},{8,10},{8,6},{10,10}};
-String names[] = {"Nicolas", "Ignacio", "Martin","Santiago", "Marcio", "Sebastian", "Belen", "Matias", "Esteban", "Manuel" };
+  int heights[] = {176,155, 182, 147, 165, 162, 179, 150, 180, 191};
+  int mathGrades [] [] = {{7,6},{8,5},{9,8},{10,9},{5,6},{7,8},{4,2},{8,10},{8,6},{10,10}};
+  String names[] = {"Nicolas", "Ignacio", "Martin","Santiago", "Marcio", "Sebastian", "Belen", "Matias", "Esteban", "Manuel" };
 
-if ((dni%2) == 0) {
-  dni ++;
-  System.out.println("Tu dni es = " + dni + "\n");
-}else{
-  dni--;
-  System.out.println("Su numero de documento es = " + dni + "\n");
-}
+  if ((dni%2) == 0) {
+    dni ++;
+    System.out.println("Tu dni es = " + dni + "\n");
+  }else{
+    dni--;
+    System.out.println("Su numero de documento es = " + dni + "\n");
+  }
 
-for(int i=0;i<=5;i++) {
-    nsocio++;
-    System.out.println("Tu número de socio es ="+nsocio);
-}
+  for(int i=0;i<=5;i++) {
+      nsocio++;
+      System.out.println("Tu número de socio es ="+nsocio);
+  }
 
-do {
-   j ++;
-   System.out.println("Iteración Número =" +j);
-}while (j<=5);
+  do {
+     j ++;
+     System.out.println("Iteración Número =" +j);
+  }while (j<=5);
 
-while (j<=11){
-    System.out.println("Numero de iteración = "+(j-5));
-    j++;
-}
+  while (j<=11){
+      System.out.println("Numero de iteración = "+(j-5));
+      j++;
+  }
 }
 **Challange about student's height, the maximum, mínimum and average**
     
 /*Getting the average, the maximum and minimum height of an array  */
-Arrays.sort(heights);
-double average =  Arrays.stream(heights).average().getAsDouble();
-System.out.println("\n La altura promedio es = " + average +  "\n" +
-        "La altura mínima es =" + heights[0] + "\n" +
-        "La altura máxima es = " + heights[9]); commented so my array don't get sorted
+  Arrays.sort(heights);
+  double average =  Arrays.stream(heights).average().getAsDouble();
+  System.out.println("\n La altura promedio es = " + average +  "\n" +
+          "La altura mínima es =" + heights[0] + "\n" +
+          "La altura máxima es = " + heights[9]); commented so my array don't get sorted
 
 /*Adding the name of the tallest and the smallest person to the last exercise
-int max =  Arrays.stream(heights).max().getAsInt();
-int min = Arrays.stream(heights).min().getAsInt();
-System.out.println("\n La altura promedio es = " +  Arrays.stream(heights).average().getAsDouble());
-for (int i=0 ; i <heights.length;i++){
-    if (heights[i] == max) System.out.println("\n La persona más alta es =" + names[i] + " con una altura de " + max);
-    if (heights[i]==min)System.out.println("\n La persona más pequeña es = " + names[i] + " con una altura de " + min);          
-    /*Next exercise adding the average math grades of every student
-    System.out.println("\n La nota promedio en Matemáticas de " + names[i] + " es = " + Arrays.stream(mathGrades[i]).average().getAsDouble());
-}
+  int max =  Arrays.stream(heights).max().getAsInt();
+  int min = Arrays.stream(heights).min().getAsInt();
+  System.out.println("\n La altura promedio es = " +  Arrays.stream(heights).average().getAsDouble());
+  for (int i=0 ; i <heights.length;i++){
+      if (heights[i] == max) System.out.println("\n La persona más alta es =" + names[i] + " con una altura de " + max);
+      if (heights[i]==min)System.out.println("\n La persona más pequeña es = " + names[i] + " con una altura de " + min);          
+      /*Next exercise adding the average math grades of every student
+      System.out.println("\n La nota promedio en Matemáticas de " + names[i] + " es = " + Arrays.stream(mathGrades[i]).average().getAsDouble());
+  }
  
   ### En un puerto se alquilan amarres para  barcos  de distinto tipo. Para cada ALQUILER se guarda el nombre y DNI del cliente, las fechas  inicial  y final de  alquiler, la posición  del amarre y el barco que  lo ocupará. Un BARCO se caracteriza por su matrícula, su eslora en metros y año de fabricación. Un alquiler se calcula multiplicando el número de días de ocupación (incluyendo los días inicial y final) por un módulo función de cada barco (obtenido simplemente multiplicando por 10 los metros de eslora) y por un valor fijo (2 e en la actualidad). Sin embargo ahora se pretende diferenciar la información de algunos  tipos de barcos:
 ### •         Número  de mástiles para  veleros
