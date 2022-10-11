@@ -70,7 +70,7 @@ public class Main {
 
 
 **Main.java**
-
+```
 package com.company;
 
 public class Main {
@@ -84,9 +84,9 @@ public class Main {
         port.getEveryMonthAverage();    //Listing the monthly average lease for every month
     }
 }
-    
+```    
 **Port.java**
-
+```
 package com.company;
 
 import java.time.LocalDate;
@@ -256,9 +256,9 @@ public class Port {
         }
     }
 }
-
+```
 **Boat.java**
-                                       
+```                                       
 package com.company;
 
 import java.time.LocalDate;
@@ -278,9 +278,9 @@ public class  Boat {
         return  eslora*valorFijo*10;    //Generic math for all boats
     }
 }
-                                       
+```                                       
 **LuxuryYacht.java**
-                         
+```                         
 package com.company;
 
 import java.time.LocalDate;
@@ -298,9 +298,9 @@ public class LuxuryYacht extends MotorSportBoat{
         return super.funcion()+nroCamarotes;    //for LuxuryYacht we have to add nroCamarotes to the MotorSportBoat function
     }
 }
-                                       
+```                                       
 **MotorSportBoat.java**
-                                       
+```                                       
  package com.company;
 
 import java.time.LocalDate;
@@ -318,9 +318,9 @@ public class MotorSportBoat extends Boat{
         return super.funcion() + potenciaCV;    //for MotorSportBoats we need to add the power to the function
     }
 }
-                                       
+```                                       
 **SailingBoat.java**
-                                       
+```                                       
 package com.company;
 
 import java.time.LocalDate;
@@ -338,9 +338,9 @@ public class SailingBoat extends Boat{
         return  super.funcion() + numMastiles;      //SailingBoats should add the number of masts to the Boat function
     }
 }
-                                       
+```                                       
 **Leasing.java**  
-                                       
+```                                       
 package com.company;
 
 import java.time.LocalDate;
@@ -376,3 +376,4 @@ public class Leasing {
     }
 
 }                                       
+```
